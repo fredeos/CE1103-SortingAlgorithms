@@ -1,7 +1,7 @@
 package lib;
 
 /*
-The insertion sort is an algorithm designed for soting an array by comparing objects 
+The insertion sort is an algorithm designed for sorting an array by comparing objects 
 and inserting the unordered elements in the postiosn where they belong. This algorithm has a O() 
 complexity.
 */
@@ -9,47 +9,30 @@ public class InsertionSort {
     /*Sorts using the insertion algorithm 
      * @param array list of integers to sort
      * @returns sorted array(in ascending order)
-     * 
     */
     public static int[] sort(int[] array){
-        return sort_aux(array, 0);
-    }
-    
-    /*Actual sorting algorithm*/
-    private static int[] sort_aux(int[] array, int index){
-        //Base case, end of the lsit
-        if(index==array.length-1){
-            return array;
-        }
-        //Recursive case
-        else {
-            int temp = array[index];
-            if(temp>=array[index+1]){//The selected temporal value is greater than the next one; must do swap
-                array[index] = array[index+1];
-                array[index+1] = temp;
-                int[] insertionList = insertion(array, array[index], index);
-                return sort_aux(insertionList, index+1);
-            }else{ ///The list stays the same; temporal is ordered
-                return sort_aux(array, index+1);
+        //--------------------[Look for analyzing through the array: does it by using bubble]--------------------//
+        for(int x=0;x<array.length-1;x++){
+            int temp = array[x]; // Temporal value of the current number
+            if (array[x]>=array[x+1]){ // Check if the number on the index is bigger than the next one
+                array[x] = array[x+1]; // -> Swap the numbers
+                array[x+1] = temp; // -> Swap the numbers
+                temp = array[x]; // -> Changes the temporal with the swapped number
+                int tempIndex = x; // Creates a temporal index to hold the value of the temp to insert
+                if (x>1){ //Only activates the insertion if the current index is higher than the first two elements
+                    //--------------------{Loop for inserting the temporal on the correspoding position}--------------------//
+                    for(int y=x; y>0;y--){
+                        if(array[y]>temp){ //Checks if the previous number on the array is lesser than the temporal
+                            array[tempIndex] = array[y]; //Swaps elements
+                            array[y] = temp; // Swaps elements
+                            tempIndex = y; // Changes the temporal index where the swap ocurred
+                        }
+                    }
+                    //--------------------{Loop for inserting the temporal on the correspoding position}--------------------//
+                }
             }
         }
-    }
-    
-    /*Checks backwards if the swapped element must be inserted at the correct place*/
-    private static int[] insertion(int[] array, int insertionElement ,int index){
-        //Base case
-        if (index==0){
-            return array;
-        }
-        //Recursive case
-        else {
-            if (insertionElement<array[index-1]){
-                array[index] = array[index-1];
-                array[index-1] = insertionElement;
-                return insertion(array, array[index-1], index-1);
-            }else{
-                return array;
-            }
-        }
+        //--------------------[Look for analyzing through the array: does it by using bubble]--------------------//
+        return array;
     }
 }
