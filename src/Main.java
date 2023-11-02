@@ -7,37 +7,12 @@ public class Main{
   
     public static void main(String[] args){
         //-------------------------[Create the test arrays]-------------------------//
-        int[] arr1 = randomArray(5); // First array
+        int n = 5; // Size of the array to sort
+        int[] arr = randomArray(n); // Set the array n size
             // Show the array1 before sorting
+            System.out.println("Original array:\n");
             int counter = 0;
-            for(int num:arr1){
-                if (counter==20){
-                    System.out.print("\n");
-                    counter=0;
-                }
-                System.out.print(num+", ");
-                counter++;
-            }
-            System.out.println("\n");
-            counter = 0;
-
-        int[] arr2 = randomArray(10); // Second array
-            // Show the array2 before sorting
-            for(int num:arr2){
-                if (counter==20){
-                    System.out.print("\n");
-                    counter=0;
-                }
-                System.out.print(num+", ");
-                counter++;
-            }
-            System.out.println("\n");
-            counter = 0;
-
-
-        int[] arr3 = randomArray(20); // Third array
-            // Show the array3 before sorting
-            for(int num:arr3){
+            for(int num:arr){
                 if (counter==20){
                     System.out.print("\n");
                     counter=0;
@@ -50,16 +25,119 @@ public class Main{
 
         //-------------------------[Test all array with a selected algoritm]-------------------------//
         // NOTE: De-commentate the desired algorithm to sort the array with the one of your desire
-
+        
+        // >>> Selection Sort <<< 
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = SelectionSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
         // >>> Bubble Sort <<<
-
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = BubbleSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
         // >>> Insertion Sort <<<
-
+            long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = InsertionSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;
         // >>> Merge Sort <<<
-
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = Merge.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
         // >>> Shell Sort <<<
-
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = ShellSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
+        // >>> Quick Sort <<<
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = QuickSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
         // >>> Radix Sort <<<
+            /*long start = System.currentTimeMillis(); //Time at the start of the algorithm
+            arr = RadixSort.sort(arr); // Change the array for the one to sort
+            long end = System.currentTimeMillis(); //Time after it finished sorting the array
+            long elapsedTime = end-start; //Total time it take
+            System.out.println("Your algorithm took:"+elapsedTime+" ms to sort the array. Result: \n");
+            for(int num:arr){
+                if (counter==20){
+                    System.out.print("\n");
+                    counter=0;
+                }
+                System.out.print(num+", ");
+                counter++;
+            }
+            System.out.println("\n");
+            counter = 0;*/
 
         
     }
