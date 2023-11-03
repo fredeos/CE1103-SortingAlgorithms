@@ -7,7 +7,7 @@ public class Main{
   
     public static void main(String[] args){
         //-------------------------[Create the test arrays]-------------------------//
-        int n = 5; // Size of the array to sort
+        int n = 10; // Size of the array to sort
         int[] arr = randomArray(n); // Set the array n size
             // Show the array1 before sorting
             System.out.println("Original array:\n");

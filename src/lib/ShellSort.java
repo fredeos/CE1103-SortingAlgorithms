@@ -3,7 +3,7 @@ package lib;
 /*
 The ShellSort algorithm consists of calculating gaps between far elements and 
 swapping them by including an insertion sort inside, this algorithm has a
-complecity of O().
+complexity of O(n*3) being a cubic complexity.
 */
 public class ShellSort {
 
@@ -20,7 +20,7 @@ public class ShellSort {
                 int temp = array[x]; //Saves a element on the right to a temporal
                 int y; //Index of the postion where the temp will be inserted
                 //----------------------------[Secondary loop: Iterates over the elements on the right of the gap]----------------------------//
-                for(y=x;y>0 && temp<array[y-gap];y-=gap){ //Only if the opposite element of the gap is greater than the one save of the temporal
+                for(y=x;y >= gap && temp < array[y - gap];y-=gap){ //Only if the opposite element of the gap is greater than the one save of the temporal
                     array[y] = array[y-gap]; //Swaps opposite end of the gap with the actual value of the temporal
                     //After the iteration completes saves the 'y' index after taking the gap
                 }

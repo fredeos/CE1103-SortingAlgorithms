@@ -2,7 +2,7 @@ package lib;
 
 /*
 The insertion sort is an algorithm designed for sorting an array by comparing objects 
-and inserting the unordered elements in the postiosn where they belong. This algorithm has a O() 
+and inserting the unordered elements in the postiosn where they belong. This algorithm has a O(n*2) 
 complexity.
 */
 public class InsertionSort {

@@ -6,7 +6,8 @@ import java.util.Arrays;
 /*
  * Sorts an array using the Radix sort algorithm that consists on sorting an array n times by arranging the
  * numbers based on the digits; it compares a digit and sorts it on one iteration and then moves to the next
- * one. The max number of iterations is given by the number with the highest amount of digits
+ * one. The max number of iterations is given by the number with the highest amount of digits. It has a complexity
+ * of O(k*n)
 */
 public class RadixSort {
 
