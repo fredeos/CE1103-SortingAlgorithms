@@ -1,3 +1,4 @@
+package lib;
 public class SelectionSort {
     /*Code created by Chio Code: https://youtu.be/ACFZn_xQcz8?si=qTm5y03Lf-zbuKSR*/
     public static int[] sort(int[] arr) {
